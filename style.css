@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* bg colors */
+    --bg-primary-color: #111111;
+    --bg-secondary-color: #222222;
+    --bg-active-color: #e9e9e9;
+
+    /* buttons color */
+    --button-denger-color: #6b2f25;
+    --button-primary-color: #124912;
+    --button-withe-color: #e7e7e7;
+    --button-skyblue-color: rgb(25, 88, 112);
+
+
+    /* text colors */
+    --text-primary-color: rgb(237, 237,237);
+    --text-secondary-color: rgb(200, 200, 200);
+    --text-tertiary-color: rgb(150, 150, 150);
+    --text-active-color: rgb(24, 24, 24);
+
+    /* padding */
+    --padding-sm: 0.5rem;
+    --padding-md: 1rem;
+    --padding-lg: 1.5rem;
+    --padding-xl: 2rem;
+    --padding-2xl: 3rem;
+
+    /* margin */
+    --margin-sm: 0.5rem;
+    --margin-md: 1rem;
+    --margin-lg: 1.5rem;
+    --margin-xl: 2rem;
+    --margin-2xl: 3rem;
+
+    /* gutter */
+    --gutter-sm: 0.5rem;
+    --gutter-md: 1rem;
+    --gutter-lg: 1.5rem;
+    --gutter-xl: 2rem;
+    --gutter-2xl: 3rem;
+
+    /* font size */
+    --font-size-sm: 0.875rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+
+    /* border radius */
+    --border-radius-sm: 0.2rem;
+    --border-radius-md: 0.25rem;
+    --border-radius-lg: 0.3rem;
+    --border-radius-xl: 0.4rem;
+    --border-radius-2xl: 0.5rem;
+
+    /* filter thumm color */
+    --filter-thum-color: #ca5757;
+}
+
+html, body {
+    width: 100%;
+    color: var(--text-primary-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    background-color: var(--bg-primary-color);
+}
+.btn{
+    background-color: var(--button-primary-color);
+    padding: var(--padding-sm);
+    color: var(--text-primary-color);
+    border: none;
+    cursor: pointer;
+    border-radius: var(--border-radius-sm);
+}
+
+.main_section {
+    padding: var(--padding-md);
+    padding-top: var(--padding-lg);
+    display: flex;
+}
+
+.left {
+    width: 70%;
+    padding: var(--padding-md);
+}
+
+.buttons_div{
+    display: flex;
+    gap: var(--gutter-md);
+    align-items: center;
+    justify-content: center;
+    padding-top: var(--padding-sm);
+}
+
+.reset_btn {
+    background-color: var(--button-denger-color);
+}
+.download_btn {
+    background-color: var(--button-skyblue-color);
+}
+.preview_div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-md);
+    background-color: var(--bg-secondary-color);
+    aspect-ratio: 5/3;
+    margin: var(--gutter-2xl) auto;
+    font-size: var(--font-size-2xl);
+    color: var(--text-secondary-color);
+    border-radius: var(--border-radius-md);
+
+}
+.preview_div .place_holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.preview_div .place_holder i {
+    font-size: 10rem;
+}
+#image_canvas {
+    display: none;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+/* -----------Filters css-------------- */
+
+.right {
+    padding: var(--padding-md);
+    width: 30%;
+    background-color: var(--bg-secondary-color);
+    border-radius: var(--border-radius-md);
+
+}
+.right > h2 {
+    margin-bottom: var(--margin-sm);
+}
+
+.filter {
+    width: 100%;
+    margin-bottom: var(--margin-sm);
+}
+
+.filter > input {
+    width: 100%;
+    outline: none;
+    appearance: none;
+}
+.filter > input::-webkit-slider-runnable-track {
+    background-color: var(--text-secondary-color);
+    height: 3px;
+}
+
+.filter > input::-webkit-slider-thumb {
+    cursor: pointer;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--filter-thum-color);
+    margin-top: -6.5px;
+}
+
+
